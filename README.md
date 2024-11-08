@@ -15,14 +15,15 @@ A simple food ordering application built with Python and Tkinter that allows use
 - **Validation**: Ensures all payment fields are filled correctly.
 - **Integration**: Works seamlessly with the main application to confirm orders.
 
-Screenshots 🖼️
-Menu Page
+## Screenshots 🖼️
+
+### Menu Page
 ![mainmenu](https://github.com/user-attachments/assets/20736691-3061-40cc-865b-0d4b9374ebc0)
 
-Cart Page
+### Cart Page
 ![itemsincart](https://github.com/user-attachments/assets/7ccd57db-e5e9-4579-ad9d-081868512754)
 
-Payment Page
+### Payment Page
 ![paymentpy](https://github.com/user-attachments/assets/ac98b1c2-47f7-4260-a58a-399e9afc5d19)
 
 
