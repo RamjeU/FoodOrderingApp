@@ -17,10 +17,14 @@ A simple food ordering application built with Python and Tkinter that allows use
 
 Screenshots 🖼️
 Menu Page
-
+![mainmenu](https://github.com/user-attachments/assets/20736691-3061-40cc-865b-0d4b9374ebc0)
 
 Cart Page
-<!-- Replace with your screenshot path -->
+![itemsincart](https://github.com/user-attachments/assets/7ccd57db-e5e9-4579-ad9d-081868512754)
+
+Payment Page
+![paymentpy](https://github.com/user-attachments/assets/ac98b1c2-47f7-4260-a58a-399e9afc5d19)
+
 
 ---
 
@@ -48,19 +52,40 @@ Cart Page
    - After payment, your cart will be cleared, and the app will confirm the order.
 
 ---
+## Example Code Snippets ✨
+
+    def add_to_cart(self, item: str, qty_var: tk.StringVar):
+        try:
+            quantity = int(qty_var.get())
+            if quantity <= 0:
+                raise ValueError
+        except ValueError:
+            messagebox.showerror("Error", "Please enter a valid quantity")
+            return
+
+        if item in self.cart:
+            self.cart[item]["quantity"] += quantity
+        else:
+            self.cart[item] = {
+                "price": self.menu[item]["price"],
+                "quantity": quantity
+            }
+
+        self.update_cart_display()
+        messagebox.showinfo("Success", f"Added {quantity} {item}(s) to cart!")
+
+
+
+
+---
 
 ## Future Plans
 
 - **Database Integration**: Use MongoDB to store menu items, orders, and user data.
 - **Web Application**: Convert the project into a Django-based website for wider accessibility.
-- **Dynamic Menu Updates**: Integrate APIs to fetch and update menu items automatically.
+- **Dynamic Menu Updates**: Integrate APIs to automatically fetch and update menu items.
 - **Real Payment Gateway**: Replace mock payment with a real service like Stripe or PayPal.
 
 ---
-
-## Author
-
-Ramje Uthayakumaar 
-
 Feel free to reach out for feedback or suggestions!
 --- 
